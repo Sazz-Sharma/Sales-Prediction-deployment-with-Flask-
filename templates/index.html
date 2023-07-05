@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    
+</head>
+<body>
+   <h1>Welcome to <span>SalesPredictor.AI</span></h1> 
+   <form action="\predict" method="POST">
+    <div id="container">
+
+    <label for="tvSales">TV Promotion Budget (in Million $)</label>
+    <input type="range" min="0" max="200" id="tvSales" class="slider" name="TVsales" value={{tvPrev}}>
+    <label for="tvSales" class="slideValue" id="tvSalesValue">100</label>
+    <label for="radioSales">Radio Promotion Budget (in Million $)</label>
+    <input type="range" min="0" max="200" id="radioSales" class="slider" name="RadioSales" value={{radioPrev}}>
+    <label for="radioSales" class="slideValue" id="radioSalesValue">100</label>
+    <label for="socialSales">Digital Promotion Budget(in Million $)</label>
+    <input type="range" min="0" max="200" id="socialSales" class="slider" name="socialSales" value={{socialPrev}}>
+    <label for="socialSales" class="slideValue" id="socialSalesValue">100</label>
+    <label for="dropdown">Digital promotion Collaboration (Type of Influencer)</label>
+    
+    <select name="influencer" id="dropdown">
+        
+        <option value=4>Mega</option>
+        <option value=3>Macro</option>
+        <option value=2>Micro</option>
+        <option value=1>Nano</option>
+        <option value=0>None</option>
+    </select>
+    </div>
+    <input type="submit" id="submitButton" value="Predict" name='result' >
+    <!-- <label for="influencer">Mega</label>
+        <input type="radio" name="influencer" id="macro">
+        <label for="influencer">Macro</label>
+        <input type="radio" name="influencer" id="micro">
+        <label for="influencer">Micro</label>
+        <input type="radio" name="influencer" id="Nano">
+        <label for="influencer">Nano</label>
+        <input type="radio" name="influencer" id="None">
+        <label for="influencer">None</label> -->
+    </form>
+    <div id='predictionDiv'>{{prediction_text}}</div>
+    <script src="{{ url_for('static', filename='main.js') }}">
+    </script>
+</body>
+</html>

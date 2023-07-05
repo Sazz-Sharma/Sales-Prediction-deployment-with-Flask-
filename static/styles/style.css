@@ -1,0 +1,97 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-weight: 500;
+    text-align: center;
+}
+span{
+    /* color: rgb(95, 67, 159); */
+    background: -webkit-linear-gradient(360deg, #82CFD0 0%, #82CFD0 20%,#9a6ffc 100%, #4758a4 50% );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+.slider{
+    appearance: none;
+    background: linear-gradient(to right, #82CFD0 0%, #82CFD0 20%,#9a6ffc 100%, #4758a4 50% );
+    height: 10%;
+    width: 80%;
+    border-radius: 50px;
+}
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    background-color: rgb(202, 188, 234);
+    height: 30px;
+    width: 30px;
+    border: 2px solid #ffffff;
+    border-radius: 100%;
+}
+.slider:hover{
+    cursor: pointer;
+}
+#dropdown{
+    /* height: 33.33%; */
+    width: 80%;
+    height: 15%;
+    text-align: center;
+    border-radius: 20px;
+}
+#dropdown:hover{
+    cursor: pointer;
+}
+#container{
+    font-size: large;
+    padding-left: 15%;
+    display: grid;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center; 
+    grid-template-columns: 33.33% 60% 17%;
+    /* column-gap: 20px; */
+    height: 80vh;
+    width: 100vw;
+    place-items: center;
+    /* position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%); */
+    /* border: 2px solid red; */
+}
+
+
+#submitButton{
+    position: absolute;
+    /* background: linear-gradient(to right, #82CFD0 0%, #82CFD0 20%,#9a6ffc 100%, #4758a4 50% ); */
+    width: 7%;
+    color: #644aa2;
+    border: none;
+    font-size: larger;
+    font-weight: 900;
+    height: 5.5%;
+    border-radius: 20px;
+    bottom: 1px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 2px 0px 1px #82CFD0,
+    0px 5px 0px 2px #9a6ffc;
+}
+#submitButton:hover{
+    height: 6%;
+    width: 8%;
+    cursor: pointer;
+    /* box-shadow: inset; */
+}
+.slideValue{
+    /* border: 2px solid red; */
+    height: 15%;
+    width: 30%;
+}
+#predictionDiv{
+    text-align: center;
+    display: block;
+}
